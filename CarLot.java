@@ -1,4 +1,4 @@
-Part II: CarLot class
+/**Part II: CarLot class
  *
  * Define a new class, CarLot that meets the following specification:
  * Attribute:
