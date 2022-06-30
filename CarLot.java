@@ -1,5 +1,7 @@
 public class CarLot {
-    private ArrayList<Car> inventory = new ArrayList<>; 
+    // Via 11.11 The ArrayList Class in text book.
+    ArrayList<Car> inventory = new ArrayList<>();
+    // no need to use concrete type thanks to type interface
     
 public Car findCarByIdentifier(String identifier) {
     // for every car in the inventory
