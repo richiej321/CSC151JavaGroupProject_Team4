@@ -24,9 +24,6 @@
  */
 	 
 import java.util.ArrayList;
-import java.util.*;  
-import java.util.stream.*;
-import java.util.Collections;
 
 public class CarLot {
     
