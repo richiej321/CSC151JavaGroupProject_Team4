@@ -24,11 +24,13 @@ Part II: CarLot class
  */
 	 
 import java.util.ArrayList;
+import java.util.*;  
+import java.util.stream.*;
 
 public class CarLot {
-    private ArrayList<Car> inventory;	
+    
     // Via 11.11 The ArrayList Class in text book.
-    // ArrayList<Car> inventory = new ArrayList<>();
+    private ArrayList<Car> inventory = new ArrayList<>();
     // no need to use concrete type thanks to type interface
     
     // accessor and mutator methods for inventory, aka getters and setters
@@ -55,15 +57,24 @@ public class CarLot {
         ArrayList<Car> inventory2 = new ArrayList<>(inventory); 
         return inventory2;
     }
+    // if not, try:
+    // public ArrayList<Car> getAllCars() {
+        //return (ArrayList<Car>) inventory.clone();
+    //}
     
     public Car getCarWithBestMPG() {
+    //  sort the array
+    	ArrayList<Car> sortedByMPG = new ArrayList<>(this.inventory);
+	selectionSort(sortedByMPG);
+	    
     // first check if array is empty
-	if (inventory.isEmpty()) {
+	if (sortedByMPG.isEmpty()) {
 	    return null;
+	    
+	// then return best mpg
 	} else {
 	    return sorted.get(sorted.size() - 1);
-
-}
-	        
+        }
+	
     }
 }
