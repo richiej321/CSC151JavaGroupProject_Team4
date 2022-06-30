@@ -14,8 +14,10 @@ public class CarLot {
 		return null;
 	    }
 	
-	public ArrayList<Car> getCarsInOrderOfEntry() {
-        return new ArrayList<>(this.inventory);
+	public ArrayList<Car> getAllCars() {
+        	ArrayList<Car> inventory2 = new ArrayList<>(inventory);
+        	return inventory2;
+    }
 	}
     }
 
