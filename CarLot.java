@@ -64,15 +64,15 @@ public class CarLot {
     //}
     
     public Car getCarWithBestMPG() {
-        int bestMPG = 0;
+        int bestMPG = -1; // last in array
+        Car carWithBestMPG = new Car();
         if (inventory.size() != 0) {
-            for (int i = 0; i < inventory.size(); i++) {
-                if (inventory.get(i).getMPG() > bestMPG) {
-                    bestMPG = inventory.get(i).getMPG();
+            for (Car car : inventory) {
+                if (car.getMPG() > bestMPG) {
+                    bestMPG = car.getMileage();
                 }
-            }    
-            return bestMPG;
-                
+            }
+            return carWithBestMPG;
         } else {
             return null;
     }
