@@ -26,6 +26,7 @@ Part II: CarLot class
 import java.util.ArrayList;
 import java.util.*;  
 import java.util.stream.*;
+import java.util.Collections;
 
 public class CarLot {
     
@@ -63,15 +64,15 @@ public class CarLot {
     //}
     
     public Car getCarWithBestMPG() {
-    //  sort the array
-    	ArrayList<Car> sortedByMPG = new ArrayList<>(this.inventory);
-	selectionSort(sortedByMPG);
+    //  sort the array:https://beginnersbook.com/2013/12/java-arraylist-of-object-sort-example-comparable-and-comparator/
+    	ArrayList<Car> mpg = new ArrayList<>(inventory);
+	Collections.sort(mpg);
     // first check if array is empty
-	if (sortedByMPG.isEmpty()) {
+	if (mpg.isEmpty()) {
 	    return null;
     // then return best mpg
 	} else {
-	    return sorted.get(sorted.size() - 1);
+	    return mpg.get(mpg.size() - 1);
         }
 	
     }
