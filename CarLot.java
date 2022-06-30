@@ -75,5 +75,18 @@ public class CarLot {
             return null;
         }
     }
-    
+    public Car getCarWithHighestMileage() {
+        int bestMileage = -1; // end of list of mileage
+        Car carWithHighestMileage = new Car();
+        if (inventory.size() != 0) {
+            for (Car car : inventory) {
+                if (car.getMileage() > bestMileage) {
+                    carWithHighestMileage = car;
+                }
+            }
+            return carWithHighestMileage;
+        } else {
+            return null;
+        }
+    }
 }
