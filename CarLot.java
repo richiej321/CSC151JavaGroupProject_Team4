@@ -66,7 +66,7 @@ public class CarLot {
         if (inventory.size() != 0) {
             for (Car car : inventory) {
                 if (car.getMPG() > bestMpg) {
-                    //bestMpg = car.getMileage();
+                    bestMpg = car.getMPG();
                     carWithBestMpg = car;
                 }
             }
@@ -81,6 +81,7 @@ public class CarLot {
         if (inventory.size() != 0) {
             for (Car car : inventory) {
                 if (car.getMileage() > bestMileage) {
+		    bestMileage = car.getMileage();
                     carWithHighestMileage = car;
                 }
             }
