@@ -66,12 +66,10 @@ public class CarLot {
     //  sort the array
     	ArrayList<Car> sortedByMPG = new ArrayList<>(this.inventory);
 	selectionSort(sortedByMPG);
-	    
     // first check if array is empty
 	if (sortedByMPG.isEmpty()) {
 	    return null;
-	    
-	// then return best mpg
+    // then return best mpg
 	} else {
 	    return sorted.get(sorted.size() - 1);
         }
