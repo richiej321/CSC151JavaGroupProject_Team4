@@ -26,11 +26,12 @@ Part II: CarLot class
 import java.util.ArrayList;
 
 public class CarLot {
-
+    private ArrayList<Car> inventory;	
     // Via 11.11 The ArrayList Class in text book.
-    ArrayList<Car> inventory = new ArrayList<>();
+    // ArrayList<Car> inventory = new ArrayList<>();
     // no need to use concrete type thanks to type interface
     
+    // accessor and mutator methods for inventory, aka getters and setters
     public ArrayList<Car> getInventory() {
         return inventory;
     }
@@ -39,18 +40,30 @@ public class CarLot {
         this.inventory = inventory;
     }
 
-
+    // 
     public Car findCarByIdentifier(String identifier) {
         for (Car car : inventory) {
-            if (car.getId().equals(identifier)) {  // accessor aka getter from part I
+            if (car.getId().equals(identifier)) {  // this assumes getID was used in part 1
                 return car;
             }
         }
         return null;
     }
 
+    // this is making a shallow copy, which is what I'm assuming is being asked.
     public ArrayList<Car> getAllCars() {
-        ArrayList<Car> inventory2 = new ArrayList<>(inventory);
+        ArrayList<Car> inventory2 = new ArrayList<>(inventory); 
         return inventory2;
+    }
+    
+    public Car getCarWithBestMPG() {
+    // first check if array is empty
+	if (inventory.isEmpty()) {
+	    return null;
+	} else {
+	    return sorted.get(sorted.size() - 1);
+
+}
+	        
     }
 }
