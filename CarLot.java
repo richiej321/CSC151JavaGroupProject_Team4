@@ -64,16 +64,5 @@ public class CarLot {
     //}
     
     public Car getCarWithBestMPG() {
-    //  sort the array:https://beginnersbook.com/2013/12/java-arraylist-of-object-sort-example-comparable-and-comparator/
-    	ArrayList<Car> mpg = new ArrayList<>(inventory);
-	Collections.sort(mpg);
-    // first check if array is empty
-	if (mpg.isEmpty()) {
-	    return null;
-    // then return best mpg
-	} else {
-	    return mpg.get(mpg.size() - 1);
-        }
-	
-    }
+    
 }
