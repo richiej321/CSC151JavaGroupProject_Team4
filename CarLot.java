@@ -64,5 +64,17 @@ public class CarLot {
     //}
     
     public Car getCarWithBestMPG() {
+        int bestMPG = 0;
+        if (inventory.size() != 0) {
+            for (int i = 0; i < inventory.size(); i++) {
+                if (inventory.get(i).getMPG() > bestMPG) {
+                    bestMPG = inventory.get(i).getMPG();
+                }
+            }    
+            return bestMPG;
+                
+        } else {
+            return null;
+    }
     
 }
