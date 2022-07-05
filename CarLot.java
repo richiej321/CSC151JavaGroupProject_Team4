@@ -121,9 +121,8 @@ public class CarLot {
     public void sellCar(String identifier, double priceSold) throws IllegalArgumentException {
         Car carToSell = this.findCarByIdentifier(identifier);
         if (carToSell != null) {
-            carToSell.setPriceSold(priceSold);
-            carToSell.setSold(true);
-            carToSell.setProfit(priceSold - carToSell.getCost()); // unsure about this one
+            // unsure about logic here
+		
         }
         else {
             throw new IllegalArgumentException("Car not found " + identifier);
