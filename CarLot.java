@@ -118,14 +118,6 @@ public class CarLot {
         inventory.add(new Car(id, mileage, mpg, cost, askingPrice));
     }
 
-    public void sellCar(String identifier, double priceSold) throws IllegalArgumentException {
-        Car carToSell = this.findCarByIdentifier(identifier);
-        if (carToSell != null) {
-            carToSell.sellCar(priceSold);
-        }
-        else {
-            throw new IllegalArgumentException("Car not found " + identifier);
-        }
-    }
+    
 
 }
