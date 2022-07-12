@@ -84,6 +84,7 @@ public void setIsSold(boolean isSold) {
 this.isSold=isSold;
 }
 
+/**
 public String toString() {
 StringBuilder sb = new StringBuilder();
 sb.append("Car: "+this.id);
@@ -146,5 +147,6 @@ void sellCar(double salePrice) {
 this.isSold=true;
 this.salePrice=salePrice;
 }
+**/
 }
 
