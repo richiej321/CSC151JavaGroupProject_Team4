@@ -40,6 +40,7 @@ this.mpg=mpg;
 this.cost=cost;
 this.askingPrice=askingPrice;
 }
+  
 public String getId() {
 return this.id;
 }
