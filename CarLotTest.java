@@ -27,13 +27,13 @@ public class CarLotTest {
 
         // get the average MPG
 
-        // System.out.print("The average MPG of all the cars is " + myLot.getAverageMpg());
+        System.out.print("The average MPG of all the cars is " + myLot.getAverageMpg());
 
         // sell 2 of the cars and get the profit from cars sold
         // sell- asks for String id and askingPrice
-        // myLot.sellCar("45678901", 18500.00);
-        // myLot.sellCar("01234567", 4500.00);
+        myLot.sellCar("45678901", 18500.00);
+        myLot.sellCar("01234567", 4500.00);
 
-       // System.out.print("The total profits from the cars sold are " + myLot.getTotalProfit());
+       System.out.print("The total profits from the cars sold are " + myLot.getTotalProfit());
     }
 }
