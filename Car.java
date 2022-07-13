@@ -23,22 +23,24 @@ Accessors and Mutators for all attributes
 */
 
 public class Car {
-private String id;
-private int mileage;
-private int mpg;
-private double cost;
-private double askingPrice;
-private double salePrice;
-private boolean isSold;
+
+  private String id;
+  private int mileage;
+  private int mpg;
+  private double cost;
+  private double askingPrice;
+  private double salePrice;
+  private boolean isSold;
+  }
 
 
 public Car() {}
-public Car(String id, int mileage, int mpg, double cost, double askingPrice) {
-this.id=id;
-this.mileage=mileage;
-this.mpg=mpg;
-this.cost=cost;
-this.askingPrice=askingPrice;
+  public Car(String id, int mileage, int mpg, double cost, double askingPrice) {
+    this.id=id;
+    this.mileage=mileage;
+    this.mpg=mpg;
+    this.cost=cost;
+    this.askingPrice=askingPrice;
 }
 public String getId() {
 return this.id;
@@ -83,4 +85,64 @@ this.salePrice=salePrice;
 public void setIsSold(boolean isSold) {
 this.isSold=isSold;
 }
+=======
+    private String id;
+    private int mileage;
+    private int mpg;
+    private double cost;
+    private double askingPrice;
+    private double salePrice;
+    private boolean isSold;
+
+    public Car() {
+        this.id = "";
+        this.mileage = 0;
+        this.mpg = 0;
+        this.cost = 0.0;
+        this.askingPrice = 0.0;
+        this.salePrice = 0.0;
+        this.isSold = false;
+    }
+
+    public Car(String id, int mileage, int mpg, double cost, double askingPrice) {
+        super();
+        this.id = id;
+        this.mileage = mileage;
+        this.mpg = mpg;
+        this.cost = cost;
+        this.askingPrice = askingPrice;
+        this.salePrice = 0;
+        this.isSold = false;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public int getMpg() {
+        return mpg;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public double getAskingPrice() {
+        return askingPrice;
+    }
+
+    public double getSalePrice() {
+        return salePrice;
+    }
+
+    public void setSold(boolean sold) {
+        isSold = sold;
+    }
+    
+
 }
+
