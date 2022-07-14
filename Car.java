@@ -1,5 +1,4 @@
 /* Part I: Car class
-
 Define a new class, Car that meets the following specification:
 Attributes:
 •	id -  uniquely identifies each car.  An example ID might be "1985 Ferrari 308GT", but any string is a valid identifier
@@ -9,7 +8,6 @@ Attributes:
 •	askingPrice -  represents the amount that the Car Lot is asking from potential buyer
 •	salePrice -  represents the amount that the Car actually sold for
 •	isSold -  represents whether is sold or not. It’s a Boolean value.
-
 Constructors:
 •	A default Constructor.
 •	A Constructor that is used to add a new Car to the CarLot's inventory. The constructor should take the following arguments: 
@@ -18,7 +16,6 @@ Constructors:
   -int mpg
   -double cost
   -double askingPrice
-
 Accessors and Mutators for all attributes
 */
 
@@ -31,61 +28,64 @@ public class Car {
   private double askingPrice;
   private double salePrice;
   private boolean isSold;
-  }
+}
 
 
 public Car() {}
   public Car(String id, int mileage, int mpg, double cost, double askingPrice) {
-    this.id=id;
-    this.mileage=mileage;
-    this.mpg=mpg;
-    this.cost=cost;
-    this.askingPrice=askingPrice;
+	  this.id=id;
+	  this.mileage=mileage;
+	  this.mpg=mpg;
+	  this.cost=cost;
+	  this.askingPrice=askingPrice;
 }
 public String getId() {
-return this.id;
+  return this.id;
 }
 public int getMileage() {
-return this.mileage;
+  return this.mileage;
 }
 public int getMpg() {
-return this.mpg;
+  return this.mpg;
 }
 public double getCost() {
-return this.cost;
+  return this.cost;
 }
 public double getAskingPrice() {
-return this.askingPrice;
+  return this.askingPrice;
 }
 public double getSalePrice() {
-return this.salePrice;
+  return this.salePrice;
 }
 public boolean isSold() {
-return this.isSold;
+  return this.isSold;
 }
 
+
 public void setId(String id) {
-this.id=id;
+  this.id=id;
 }
 public void setMileage(int mileage) {
-this.mileage=mileage;
+  this.mileage=mileage;
 }
 public void setMpg(int mpg) {
-this.mpg=mpg;
+  this.mpg=mpg;
 }
 public void setCost(double cost) {
-this.cost=cost;
+  this.cost=cost;
 }
 public void setAskingPrice(double askingPrice) {
-this.askingPrice=askingPrice;
+  this.askingPrice=askingPrice;
 }
 public void setSalePrice(double salePrice) {
-this.salePrice=salePrice;
+  this.salePrice=salePrice;
 }
 public void setIsSold(boolean isSold) {
-this.isSold=isSold;
+  this.isSold=isSold;
 }
-=======
+
+//
+
     private String id;
     private int mileage;
     private int mpg;
@@ -142,7 +142,6 @@ this.isSold=isSold;
     public void setSold(boolean sold) {
         isSold = sold;
     }
-    
-
 }
+    
 
