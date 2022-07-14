@@ -15,14 +15,14 @@ public class CarLotTest {
 
         // print out all the cars in the lot in a tabular form
     
-        System.out.println("Cars for Sale: ");
-        System.out.print("--------------------");
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "ID", "Mileage", "MPG", "Cost", "Asking Price");
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "01234567", 277200, 18, 3000.00, 4500.00);
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "12345678", 50000, 30, 5000.00, 7500.00);
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "23456789", 100000, 25, 10000.00, 12500.00);
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "34567890", 150000, 21, 7000.00, 9000.00);
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "45678901", 20000, 35, 12500.00, 18500.00);
+        System.out.print("Cars for Sale: ");
+        System.out.println("--------------------");
+        System.out.printf("%-15s %-15d %-15d %-15f %-15f ", "ID", "Mileage", "MPG", "Cost", "Asking Price\n");
+        System.out.printf("%-15s %-15d %-15d %-15f %-15f ", "01234567", 277200, 18, 3000.00, 4500.00'\n');
+        System.out.printf("%-15s %-15d %-15d %-15f %-15f ", "12345678", 50000, 30, 5000.00, 7500.00'\n');
+        System.out.printf("%-15s %-15d %-15d %-15f %-15f ", "23456789", 100000, 25, 10000.00, 12500.00'\n');
+        System.out.printf("%-15s %-15d %-15d %-15f %-15f ", "34567890", 150000, 21, 7000.00, 9000.00'\n');
+        System.out.printf("%-15s %-15d %-15d %-15f %-15f ", "45678901", 20000, 35, 12500.00, 18500.00'\n');
 
        
 
