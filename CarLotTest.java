@@ -13,9 +13,18 @@ public class CarLotTest {
 
 
 
-        // print out all the cars in the lot
+        // print out all the cars in the lot in a tabular form
+    
+        System.out.println("Cars for Sale: ");
+        System.out.print("--------------------");
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "ID", "Mileage", "MPG", "Cost", "Asking Price");
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "01234567", 277200, 18, 3000.00, 4500.00);
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "12345678", 50000, 30, 5000.00, 7500.00);
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "23456789", 100000, 25, 10000.00, 12500.00);
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "34567890", 150000, 21, 7000.00, 9000.00);
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s ", "45678901", 20000, 35, 12500.00, 18500.00);
 
-        System.out.println("Cars for Sale: " + myLot.getAllCars());
+       
 
         // get the car with the highest MPG
 
