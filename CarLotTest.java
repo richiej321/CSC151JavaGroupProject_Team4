@@ -21,7 +21,7 @@ public class CarLotTest extends CarLot {
 
         System.out.println("--------------------");
         System.out.printf("%-15s %-15s %-15s %-15s %-15s\n", "ID", "Mileage", "MPG", "Cost", "Asking Price");
-       
+
         getAllCars().forEach(
                 (car) -> System.out.printf("%-15s %-15s %-15s %-15s %-15s%n",
                         car.getId(), car.getMileage(), car.getMpg(),
@@ -41,7 +41,7 @@ public class CarLotTest extends CarLot {
 
         System.out.println("The average MPG of all the cars is " + getAverageMpg());
 
-        
+
         System.out.println("Please enter an Identifier for the car: ");
         String identifier = input.nextLine();
         System.out.println("Please enter the price the car sold for: ");
