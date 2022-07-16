@@ -20,73 +20,83 @@ Accessors and Mutators for all attributes
 */
 
 public class Car {
-
-	private String id;
-	private int mileage;
-	private int mpg;
-	private double cost;
-	private double askingPrice;
-	private double salePrice;
-	private boolean isSold;
-
-
-	public Car() {}
-	public Car(String id, int mileage, int mpg, double cost, double askingPrice) {
-		this.id=id;
-		this.mileage=mileage;
-		this.mpg=mpg;
-		this.cost=cost;
-		this.askingPrice=askingPrice;
-	}
-
-	public String getId() {
-		return this.id;
-	}
-	public int getMileage() {
-		return this.mileage;
-	}
-	public int getMpg() {
-		return this.mpg;
-	}
-	public double getCost() {
-		return this.cost;
-	}
-	public double getAskingPrice() {
-		return this.askingPrice;
-	}
-	public double getSalePrice() {
-		return this.salePrice;
-	}
-	public boolean isSold() {
-		return this.isSold;
-	}
+    private String id;
+    private int mileage;
+    private int mpg;
+    private double cost;
+    private double askingPrice;
+    private double salePrice;
+    private boolean isSold;
+    private double profit = 0.0;
 
 
-	public void setId(String id) {
-		this.id=id;
-	}
-	public void setMileage(int mileage) {
-		this.mileage=mileage;
-	}
-	public void setMpg(int mpg) {
-		this.mpg=mpg;
-	}
-	public void setCost(double cost) {
-		this.cost=cost;
-	}
-	public void setAskingPrice(double askingPrice) {
-		this.askingPrice=askingPrice;
-	}
-	public void setSalePrice(double salePrice) {
-		this.salePrice=salePrice;
-	}
-	public void setIsSold(boolean isSold) {
-		this.isSold=isSold;
-	}	
+    public Car() {
+    }
+
+
+    public Car(String id, int mileage, int mpg, double cost, double askingPrice) {
+        super();
+        this.id = id;
+        this.mileage = mileage;
+        this.mpg = mpg;
+        this.cost = cost;
+        this.askingPrice = askingPrice;
+        this.salePrice = 0;
+        this.isSold = false;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public int getMileage() {
+        return this.mileage;
+    }
+
+    public int getMpg() {
+        return this.mpg;
+    }
+
+    public double getCost() {
+        return this.cost;
+    }
+
+    public double getAskingPrice() {
+        return this.askingPrice;
+    }
+
+    public double getSalePrice() {
+        return this.salePrice;
+    }
+
+    public void getSold() {
+        isSold = false;
+    }
+
+    public double getProfit(){
+        return this.profit;
+    }
+    public void sellCar(double priceSold){
+        this.salePrice = salePrice;
+        this.isSold = true;
+        this.profit = this.salePrice - this.cost;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(" "+this.id);
+        sb.append(" "+this.mileage);
+        sb.append(" "+this.mpg);
+        sb.append(" "+this.cost);
+        sb.append(" "+this.askingPrice);
+
+        return sb.toString();
+    }
+
 }
 
 /**
-
+public class Car {
     private String id;
     private int mileage;
     private int mpg;
@@ -140,9 +150,8 @@ public class Car {
         return salePrice;
     }
 
-    public void setSold(boolean sold) {
+    public void getSold(boolean sold) {
         isSold = sold;
     }
-}
-    
 **/
+
