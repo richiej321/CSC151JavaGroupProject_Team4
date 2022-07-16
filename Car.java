@@ -69,15 +69,11 @@ public class Car {
         return this.salePrice;
     }
 
-    public void getSold() {
-        isSold = false;
-    }
-
     public double getProfit(){
         return this.profit;
     }
-    public void sellCar(double priceSold){
-        this.salePrice = salePrice;
+    public void sellCar(double salePrice){
+        this.salePrice = 0;
         this.isSold = true;
         this.profit = this.salePrice - this.cost;
     }
@@ -92,7 +88,6 @@ public class Car {
 
         return sb.toString();
     }
-
 }
 
 /**
@@ -154,4 +149,5 @@ public class Car {
         isSold = sold;
     }
 **/
+
 
