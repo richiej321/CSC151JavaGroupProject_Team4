@@ -41,17 +41,40 @@ public class CarLotTest extends CarLot {
 
         System.out.println("The average MPG of all the cars is " + getAverageMpg());
 
-
-        System.out.println("Please enter an Identifier for the car: ");
-        String identifier = input.nextLine();
-        System.out.println("Please enter the price the car sold for: ");
-        double salePrice = input.nextDouble();
-
-        try {
-            myLot.sellCar(identifier, salePrice);
-        }
-        catch(Exception e) {
-            System.out.println(e.getMessage());
+        int i;
+        for (i = 0; i < 2; i++) {
+        	System.out.println("Please enter the identifier of a sold car: ");        	
+        	String identifier = input.nextLine();
+            Double salePrice = null;
+            try {
+            	switch(identifier) {
+            	case "01234567":
+            		salePrice = 4500.00;
+            		myLot.sellCar(identifier, salePrice);
+            		
+            		break;
+            	case "12345678":
+            		salePrice = 7500.00;
+            		myLot.sellCar(identifier, salePrice);
+            		break;
+            	case "23456789":
+            		salePrice = 12500.00;
+            		myLot.sellCar(identifier, salePrice);
+            		break;
+            	case "34567890":
+            		salePrice = 9000.00;
+            		myLot.sellCar(identifier, salePrice);
+            		break;
+            	case "45678901":
+            		salePrice = 18500.00;
+            		myLot.sellCar(identifier, salePrice);
+            		break;
+                }	        
+           }
+           catch(Exception e) {
+                System.out.println(e.getMessage());
+           }    
+           
         }
         System.out.println("The total profits from the cars sold are " + myLot.getTotalProfit());
     }
