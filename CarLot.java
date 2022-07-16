@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 
@@ -40,11 +39,7 @@ public class CarLot extends Car {
         return this.inventory;
     }
 
-    //public void setInventory(ArrayList<Car> inventory) {
-        //this.inventory = inventory;
-    //}
-
-    //
+   
     public static Car findCarByIdentifier(String identifier) {
         for (Car car : inventory) {
             if (car.getId().equals(identifier)) {  // this assumes getID was used in part 1
@@ -63,17 +58,6 @@ public class CarLot extends Car {
         return newInventory;
     }
 
-    /**
-     * public static String getAllCars() {
-     *         ArrayList<Car> newInventory = new ArrayList<Car>(inventory);
-     *         //return String.format("%-15s \n ", newInventory);
-     *         return newInventory;
-     *     }
-     */
-
-    //public ArrayList<Car> getAllCars() {
-        //return (ArrayList<Car>) inventory.clone();
-    //}
 
     public static Car getCarWithBestMPG() {
         int bestMpg = -1; // end of list of mpgs
@@ -120,7 +104,7 @@ public class CarLot extends Car {
     public double getTotalProfit() {
         double profit = 0;
         for(Car car : inventory) {
-            profit += car.getSalePrice();
+            profit += car.getProfit();
         }
         return profit;
     }
@@ -137,5 +121,7 @@ public class CarLot extends Car {
         }
     }
 }
+
+
 
 
