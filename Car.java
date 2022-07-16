@@ -73,7 +73,7 @@ public class Car {
         return this.profit;
     }
     public void sellCar(double salePrice){
-        this.salePrice = 0;
+        this.salePrice = salePrice;
         this.isSold = true;
         this.profit = this.salePrice - this.cost;
     }
